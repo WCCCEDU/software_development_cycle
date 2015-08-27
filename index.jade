@@ -12,7 +12,7 @@ html(lang="en")
     .reveal
       .slides
         +titleSlide({title: "The Software Development Cycle",subtitle: ""})
-        +olSlide("Two Truths and a Lie",
+        +olSlide("Two Truths & a Lie",
           [
             "A program with syntax errors can execute but might produce incorrect results.",
             "Although the syntax of programming languages differs, the same program logic can be expressed in different languages",
@@ -79,6 +79,15 @@ html(lang="en")
           +littleTitleSlide("One lump or two")
             img(src="assets/flow3.png")
 
+          +olSlide("Two Truths & a Lie",
+            [
+              "Understanding the problem that must be solved can be one of the most difficult aspects of programming.",
+              "The two most commonly used logic-planning tools are flowcharts and pseudocode.",
+              "Flowcharting a program is a very different process if you use an older programming language instead of a newer one."
+            ]
+          )
+
+
           +bigTitleSlide("Let's Try it")
             :markdown
               Draw a flowchart and its pseudocode to represent of a program that allows the user to enter values for the width and length of a room's floor in feet
@@ -91,6 +100,23 @@ html(lang="en")
         +slideGroup
           +littleTitleSlide("Putting them together")
             img(src="assets/combining_structures.png" width="80%")
+
+          +littleTitleSlide("Identify the parts")
+            img(src="assets/loop_in_sequence_in_selection.png")
+
+          +littleTitleSlide("Identify the parts")
+            img(src="assets/selection_in_loop_in_sequence.png" width="70%")
+
+          +littleTitleSlide("Lets build our own")
+            include code/buying_a_plant
+
+          +olSlide("Two Truths & a Lie",
+            [
+              "Each structure in structured programming is a sequence, selection, or loop.",
+              "All logic problems can be solved using only three structures-sequence, selection, and loop.",
+              "The three structures cannot be combined into a single program."
+            ]
+          )
 
 
     include bower_components/RevealJade/shared/footer
