@@ -1,0 +1,88 @@
+- var revealLocation = 'bower_components/reveal.js/'
+doctype html
+html(lang="en")
+
+  include bower_components/RevealJade/shared/slide_mixins
+
+  include head
+
+  link(rel='external' type='text/html' src="bower_components/RevealJade/shared/head.jade")
+
+  body
+    .reveal
+      .slides
+        +titleSlide({title: "The Software Development Cycle",subtitle: ""})
+        +olSlide("Two Truths and a Lie",
+          [
+            "A program with syntax errors can execute but might produce incorrect results.",
+            "Although the syntax of programming languages differs, the same program logic can be expressed in different languages",
+            "Most simple computer programs include steps that perform input, processing, and output"
+          ]
+        )
+
+        +slideGroup
+          +bigTitleSlide("")
+            img(src="assets/software_development_cycle.png" width= "80%")
+          +littleTitleSlide('Understand the problem')
+            :markdown
+              The checking account problem
+
+          +littleTitleSlide('Plan the logic')
+
+          +bigTitleSlide("")
+            img(src="assets/software_development_cycle.png" width= "80%")
+
+        +slideGroup
+          +littleTitleSlide("Planning Logic")
+            img(src="assets/flow_chart_vs_pseudocode.png")
+          +littleTitleSlide("The Symbols")
+            img(src="assets/flow_chart_symbols.png" width= "80%")
+            +speakerNotes
+              :markdown
+                Write this down
+
+          +bigTitleSlide("Inputs and Outputs")
+            :markdown
+              These represent "variables"
+
+              x = 4
+
+              x + 1 = 5
+
+          +bigTitleSlide("Processing")
+            :markdown
+              Time to take some action
+
+          +littleTitleSlide("My cup of coffee")
+            img(src="assets/flow1.png")
+
+          +littleTitleSlide("")
+            include code/pseudocode1
+
+          +bigTitleSlide("Decisions")
+            include code/conditional
+
+          +littleTitleSlide("How do you like your Coffee")
+            img(src="assets/flow2.png")
+
+          +littleTitleSlide("")
+            include code/pseudocode2
+
+          +bigTitleSlide("Looping")
+            :markdown
+              Repeating yourself
+
+          +littleTitleSlide("")
+            include code/pseudocode3
+
+          +littleTitleSlide("One lump or two")
+            img(src="assets/flow3.png")
+
+          +bigTitleSlide("Let's Try it")
+            :markdown
+              Draw a flowchart and its pseudocode to represent of a program that allows the user to enter values for the width and length of a room's floor in feet
+
+              The program outputs the area of the floor
+
+
+    include bower_components/RevealJade/shared/footer

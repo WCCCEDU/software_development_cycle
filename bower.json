@@ -1,0 +1,19 @@
+{
+  "name": "be_the_middleman",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ninjapanzer/be_the_middleman",
+  "authors": [
+    "Paul Scarrone"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "RevealJade": "git@github.com:ninjapanzer/RevealJade.git#master"
+  }
+}
