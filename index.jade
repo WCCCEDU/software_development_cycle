@@ -41,25 +41,26 @@ html(lang="en")
               :markdown
                 Write this down
 
-          +bigTitleSlide("Inputs and Outputs")
-            :markdown
-              These represent "variables"
+          +littleTitleSlide("Inputs and Outputs")
+            include code/vars1
 
-              x = 4
+          +bigTitleSlide("")
+            include code/vars2
 
-              x + 1 = 5
+          +bigTitleSlide("")
+            include code/vars3
 
           +bigTitleSlide("Processing")
             :markdown
               Time to take some action
 
-          +littleTitleSlide("My cup of coffee")
+          +littleTitleSlide("(Sequence) My cup of coffee")
             img(src="assets/flow1.png")
 
           +littleTitleSlide("")
             include code/pseudocode1
 
-          +bigTitleSlide("Decisions")
+          +bigTitleSlide("(Selection) Decisions")
             include code/conditional
 
           +littleTitleSlide("How do you like your Coffee")
@@ -68,7 +69,7 @@ html(lang="en")
           +littleTitleSlide("")
             include code/pseudocode2
 
-          +bigTitleSlide("Looping")
+          +bigTitleSlide("(Loop) Repetition")
             :markdown
               Repeating yourself
 
@@ -83,6 +84,13 @@ html(lang="en")
               Draw a flowchart and its pseudocode to represent of a program that allows the user to enter values for the width and length of a room's floor in feet
 
               The program outputs the area of the floor
+
+          +bigTitleSlide("Review")
+            img(src="assets/the_three_structures_review.png")
+
+        +slideGroup
+          +littleTitleSlide("Putting them together")
+            img(src="assets/combining_structures.png" width="80%")
 
 
     include bower_components/RevealJade/shared/footer
