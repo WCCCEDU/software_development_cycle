@@ -57,11 +57,27 @@ html(lang="en")
           +littleTitleSlide("(Sequence) My cup of coffee")
             img(src="assets/flow1.png")
 
+            +speakerNotes
+              :markdown
+                Processing from start to finish this data flows in one directions
+
           +littleTitleSlide("")
             include code/pseudocode1
 
+            +speakerNotes
+              :markdown
+                - While this code does not run we can consider each statement representative of a procedure that could perform some useful actions
+                - The best thing to take away here is when we consider our verbiage of our pseudocode or flow chart we want to be as descriptive as possible
+
           +bigTitleSlide("(Selection) Decisions")
             include code/conditional
+
+            +speakerNotes
+              <p>I call it a huh? ¯\_(ツ)_/¯</p>
+              <p>We through our arms up and decide which direction to take</p>
+              :markdown
+                - When comparing the pseudocode to the JavaScript the primary difference is we wrap the nested block in { } (**curly braces** or just **braces**)
+                - not to be confused with [ ] (**brackets**)
 
           +littleTitleSlide("How do you like your Coffee")
             img(src="assets/flow2.png")
@@ -72,6 +88,11 @@ html(lang="en")
           +bigTitleSlide("(Loop) Repetition")
             :markdown
               Repeating yourself
+
+            +speakerNotes
+              :markdown
+                - Loops contain a condition that we will repeat as long as it is true
+                - It is represented only by a flow line from a decision to a state prior to that decision on the yes or true path
 
           +littleTitleSlide("")
             include code/pseudocode3
@@ -87,12 +108,28 @@ html(lang="en")
             ]
           )
 
+            +speakerNotes
+              :markdown
+                - the false one is #3
+                - As I mentioned programming languages are derivative from each other in a genealogical way.
+                - This is at least true for any language with the same ancestor
+
 
           +bigTitleSlide("Let's Try it")
             :markdown
-              Draw a flowchart and its pseudocode to represent of a program that allows the user to enter values for the width and length of a room's floor in feet
+              Draw a flowchart and its pseudocode to represent a program that allows the user to enter values for the width and length of a room's floor in feet
 
               The program outputs the area of the floor
+
+          +littleTitleSlide("One Possible Solution")
+            img(src="assets/area_flow_chart.png")
+
+          +littleTitleSlide("")
+            include code/try_it_1_pseudo
+
+            +speakerNotes
+              :markdown
+                Like **alert** **prompt** is something we can execute from the console that will allow us to provide text to our variables
 
           +bigTitleSlide("Review")
             img(src="assets/the_three_structures_review.png")
@@ -104,11 +141,23 @@ html(lang="en")
           +littleTitleSlide("Identify the parts")
             img(src="assets/loop_in_sequence_in_selection.png")
 
+            +speakerNotes
+              :markdown
+                Identify what is the loop what is the sequence and what is the selection
+
           +littleTitleSlide("Identify the parts")
             img(src="assets/selection_in_loop_in_sequence.png" width="70%")
 
+            +speakerNotes
+              :markdown
+                Identify what is the loop what is the sequence and what is the selection
+
           +littleTitleSlide("Lets build our own")
             include code/buying_a_plant
+
+            +speakerNotes
+              :markdown
+                Identify what is the loop what is the sequence and what is the selection
 
           +olSlide("Two Truths & a Lie",
             [
@@ -118,5 +167,14 @@ html(lang="en")
             ]
           )
 
+          +bigTitleSlide("Try it on your own")
+            :markdown
+              Draw a flowchart and its pseudocode to represent a program that will take 5 coffee orders
+
+              You will ask each person if they want decaf
+
+              You will ask each person if they want milk
+
+              We will review it on Monday
 
     include bower_components/RevealJade/shared/footer
