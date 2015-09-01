@@ -1,7 +1,7 @@
 SOURCE_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 syncBranch(){
-  echo "Syncing to remote $1"
+  echo "Syncing to $1 $2"
   DEST_BRANCH=$1
   DEST_REMOTE=$2
   git checkout $DEST_BRANCH
