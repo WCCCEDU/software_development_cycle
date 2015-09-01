@@ -15,11 +15,13 @@ fi
 git reset --hard $SOURCE_BRANCH
 
 # Prepare build dependencies
+npm install
 bower install
+grunt jade
 
 # ignore .gitignore and commit build dependencies
 git add --force bower_components
-git add --force *.html
+git add --force index.html
 git commit -m "add bower components and htmls"
 
 # Overwrite the destination branch
