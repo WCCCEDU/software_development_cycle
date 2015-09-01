@@ -2,8 +2,8 @@ SOURCE_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 syncBranch(){
   echo "Syncing to remote $1"
-  DEST_BRANCH = $1
-  DEST_REMOTE = $2
+  DEST_BRANCH=$1
+  DEST_REMOTE=$2
   git checkout $DEST_BRANCH
 
   # Make sure we actually made it to the destination branch
