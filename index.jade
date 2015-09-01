@@ -177,4 +177,34 @@ html(lang="en")
 
               We will review it on Monday
 
-    include bower_components/RevealJade/shared/footer
+        +slideGroup
+          +littleTitleSlide("What is Structured Code")
+          +littleTitleSlide("The Rules")
+            :markdown
+              - A structured program includes only combinations of the three basic structures.
+              - Each of the structures has a single entry point and a single exit point.
+              - Any structures can be stacked or connected to one another at their entry and exit points.
+              - Any structure can be nested within another structure.
+
+          +littleTitleSlide("The Reason for Structure")
+            :markdown
+              - _Clarity_ - As programs get bigger, they get more confusing if they are not structured.
+              - _Maintenance_ - You and other programmers will find it easier to modify and maintain structured programs as they change in the future
+              - _Modularity_ - Structured programs can easily be broken down into modules that can be assigned to other programmers. Modules can be reused.
+
+          +littleTitleSlide("Example of unstructured code")
+            img(src="assets/an_unstructured_program.png" width="60%")
+
+          +olSlide("Two Truths & a Lie",
+            [
+              "Some processes cannot be expressed in a structured format.",
+              "An unstructured flowchart can achieve correct outcome.",
+              "Any unstructured can be 'detangled' to become structured."
+            ]
+          )
+
+          +bigTitleSlide("Let's Try It")
+            :markdown
+              You are concerned that your car has a flat tire. Standing outside the car how do we identify and/or replace a leaky tire?
+
+    include footer
