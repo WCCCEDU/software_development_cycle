@@ -1,0 +1,63 @@
+include fragment_mixins
+
+mixin titleSlide(titleData, attrs)
+  +slide(attrs)
+    h1
+      = titleData.title
+    h3
+      = titleData.subtitle
+    p
+      div.left
+        small Paul Scarrone
+      div.left
+        small.twitter @PaulSCoder
+      div.left
+        small.email paul.scarrone@gmail.com
+    aside.notes
+      | Title Slide
+
+mixin ulSlide(title, list, attrs)
+  +slide(attrs)
+    h3= title
+    +ul(list)
+    block
+
+mixin ulFragmentSlide(title,list,attrs)
+  +slide(attrs)
+    h3= title
+    +ulFragment(list)
+    block
+
+mixin olSlide(title, list, attrs)
+  +slide(attrs)
+    h3= title
+    +ol(list)
+    block
+
+mixin olFragmentSlide(title,list,attrs)
+  +slide(attrs)
+    h3= title
+    +olFragment(list)
+    block
+
+mixin bigTitleSlide(title, attrs)
+  +slide(attrs)
+    h1= title
+    block
+
+mixin littleTitleSlide(title, attrs)
+  +slide(attrs)
+    h3= title
+    block
+
+mixin slide(attrs)
+  section&attributes(typeof(attrs) == 'object' ? attrs : {})
+    block
+
+mixin slideGroup(attrs)
+  +slide(attrs)
+    block
+
+mixin speakerNotes(attrs)
+  aside.notes&attributes(typeof(attrs) == 'object' ? attrs : {})
+    block

@@ -1,0 +1,27 @@
+{
+  "name": "RevealJade",
+  "homepage": "https://github.com/ninjapanzer/RevealJade",
+  "authors": [
+    "Paul Scarrone"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.1"
+  },
+  "_release": "458733601c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "458733601c41cb4a51cb9de27c04a3300df66dcb"
+  },
+  "_source": "git@github.com:ninjapanzer/RevealJade.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:ninjapanzer/RevealJade.git"
+}

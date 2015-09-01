@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>1.2 Software Cycle</title>
+    <meta name="description" content="">
+    <meta name="author" content="Paul Scarrone">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
+    <link id="theme" rel="stylesheet" href="bower_components/reveal.js/css/theme/simple.css">
+    <!-- For syntax highlighting-->
+    <link rel="stylesheet" href="github-hightlightjs.css">
+    <script src="//localhost:35729/livereload.js"></script>
+    <script>var revealLocation = 'bower_components/reveal.js/'</script>
+    <!--if lt IE 9
+    script(src= revealLocation + 'lib/js/html5shiv.js')
+    
+    -->
+    <script>
+      document.write( '<link rel="stylesheet" href="' + revealLocation + 'css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+      if(window.location.search.match( /print-pdf/gi )){
+        document.write('<style>.reveal aside.notes{display:block;font-size:0.4em;}.reveal aside.notes:before{content: "Notes: ";font-weight: bold;}</style>');
+      }
+    </script>
+  </head>
+  <link rel="external" type="text/html" src="bower_components/RevealJade/shared/head.jade">
+  <body>
+    <div class="reveal">
+      <div class="slides">
+            <section>
+              <h1>The Software Development Cycle
+              </h1>
+              <h3>
+              </h3>
+              <p>
+                <div class="left"><small>Paul Scarrone</small></div>
+                <div class="left"><small class="twitter">@PaulSCoder</small></div>
+                <div class="left"><small class="email">paul.scarrone@gmail.com</small></div>
+              </p>
+              <aside class="notes">Title Slide</aside>
+            </section>
+            <section>
+              <h3>Two Truths &amp; a Lie</h3>
+                <ol>
+                  <li>A program with syntax errors can execute but might produce incorrect results.</li>
+                  <li>Although the syntax of programming languages differs, the same program logic can be expressed in different languages</li>
+                  <li>Most simple computer programs include steps that perform input, processing, and output</li>
+                </ol>
+            </section>
+            <section>
+                  <section>
+                    <h1></h1><img src="assets/software_development_cycle.png" width="80%">
+                  </section>
+                  <section>
+                    <h3>Understand the problem</h3><p>The checking account problem</p>
+
+                  </section>
+                  <section>
+                    <h3>Plan the logic</h3>
+                  </section>
+                  <section>
+                    <h1></h1><img src="assets/software_development_cycle.png" width="80%">
+                  </section>
+            </section>
+            <section>
+                  <section>
+                    <h3>Planning Logic</h3><img src="assets/flow_chart_vs_pseudocode.png">
+                  </section>
+                  <section>
+                    <h3>The Symbols</h3><img src="assets/flow_chart_symbols.png" width="80%">
+                      <aside class="notes"><p>Write this down</p>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3>Inputs and Outputs</h3><h4 id="-variables-">(Variables)</h4>
+<pre><code>x = 4
+x + 1 = 5
+</code></pre><h4 id="pseudocode">Pseudocode</h4>
+<pre><code>set x = 4
+output x + 1
+</code></pre><h4 id="javascript">JavaScript</h4>
+<pre><code>var x = 4;
+alert(x + 1);
+</code></pre>
+                  </section>
+                  <section>
+                    <h1></h1><h4 id="another-way-of-looking-at-it">Another way of looking at it</h4>
+<pre><code>x = &quot;Paul&quot;
+&quot;My name is &quot; + x = ?
+</code></pre><h4 id="pseudocode">Pseudocode</h4>
+<pre><code>set x = &quot;Paul&quot;
+output &quot;My name is &quot; + x
+</code></pre><h4 id="javascript">JavaScript</h4>
+<pre><code>var x = &quot;Paul&quot;;
+alert(&quot;My name is &quot; + x);
+</code></pre>
+                  </section>
+                  <section>
+                    <h1></h1><h4 id="one-step-further">One Step Further</h4>
+<pre><code>x = &quot;Paul&quot;
+y = &quot;My Name is &quot;
+y + x = ?
+</code></pre><h4 id="pseudocode">Pseudocode</h4>
+<pre><code>set x = &quot;Paul&quot;
+set y = &quot;My Name is &quot;
+output y + x
+</code></pre><h4 id="javascript">JavaScript</h4>
+<pre><code>var x = &quot;Paul&quot;;
+var y = &quot;My Name is &quot;;
+alert(y + x);
+</code></pre>
+                  </section>
+                  <section>
+                    <h1>Processing</h1><p>Time to take some action</p>
+
+                  </section>
+                  <section>
+                    <h3>(Sequence) My cup of coffee</h3><img src="assets/flow1.png">
+                      <aside class="notes"><p>Processing from start to finish this data flows in one directions</p>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3></h3><h6 id="sequence-pseudocode">Sequence Pseudocode</h6>
+<pre><code>Start
+  Boil kettle
+  Add coffee to cup
+  Add boiling water
+  Add milk
+  Add sugar
+End
+</code></pre><h6 id="javascript-does-not-run-">JavaScript (Does not run)</h6>
+<pre><code>boilKettle();
+addCoffeeToCup();
+addBoilingWater();
+addMilk();
+addSugar();
+</code></pre>
+                      <aside class="notes"><ul>
+<li>While this code does not run we can consider each statement representative of a procedure that could perform some useful actions</li>
+<li>The best thing to take away here is when we consider our verbiage of our pseudocode or flow chart we want to be as descriptive as possible</li>
+</ul>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h1>(Selection) Decisions</h1><h6 id="condition">Condition</h6>
+<pre><code>If (you are) happy then
+  clap
+else
+  (you should) frown.
+</code></pre>
+                      <aside class="notes">
+                        <p>I call it a huh? ¯\_(ツ)_/¯</p>
+                        <p>We through our arms up and decide which direction to take</p><ul>
+<li>When comparing the pseudocode to the JavaScript the primary difference is we wrap the nested block in { } (<strong>curly braces</strong> or just <strong>braces</strong>)</li>
+<li>not to be confused with [ ] (<strong>brackets</strong>)</li>
+</ul>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3>How do you like your Coffee</h3><img src="assets/flow2.png">
+                  </section>
+                  <section>
+                    <h3></h3><h6 id="selection-pseudocode">Selection Pseudocode</h6>
+<pre><code>Start
+  Boil kettle
+  Add coffee to cup
+  Add boiling water
+  If Milk required?
+    Add milk
+  End If
+  If Sugar required?
+    Add sugar
+  End If
+End
+</code></pre><h6 id="javascript-does-not-run-">JavaScript (Does not run)</h6>
+<pre><code>boilKettle();
+addCoffeeToCup();
+addBoilingWater();
+
+if(milk === true){
+  addMilk();
+}
+
+if(sugar == true){
+  addSugar();
+}
+</code></pre>
+                  </section>
+                  <section>
+                    <h1>(Loop) Repetition</h1><p>Repeating yourself</p>
+
+                      <aside class="notes"><ul>
+<li>Loops contain a condition that we will repeat as long as it is true</li>
+<li>It is represented only by a flow line from a decision to a state prior to that decision on the yes or true path</li>
+</ul>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3></h3><h6 id="loop-pseudocode">Loop Pseudocode</h6>
+<pre><code>Start
+  Output &quot;How many sugars?&quot;
+  Input sugars
+  Set added = 0
+  Loop
+    If added == sugars ?
+      Add sugar
+      Set added = added + 1
+    End If
+  End Loop
+End
+</code></pre><h6 id="javascript-does-not-run-">Javascript (Does not run)</h6>
+<pre><code>var sugars = prompt(&quot;How many sugars?&quot;, 0); //Output and Input in one command
+var added = 0;
+while(added &lt; sugars){
+  addSugar();
+  added = added + 1;
+}
+</code></pre>
+                  </section>
+                  <section>
+                    <h3>One lump or two</h3><img src="assets/flow3.png">
+                  </section>
+                  <section>
+                    <h3>Two Truths &amp; a Lie</h3>
+                      <ol>
+                        <li>Understanding the problem that must be solved can be one of the most difficult aspects of programming.</li>
+                        <li>The two most commonly used logic-planning tools are flowcharts and pseudocode.</li>
+                        <li>Flowcharting a program is a very different process if you use an older programming language instead of a newer one.</li>
+                      </ol>
+                      <aside class="notes"><ul>
+<li>the false one is #3</li>
+<li>As I mentioned programming languages are derivative from each other in a genealogical way.</li>
+<li>This is at least true for any language with the same ancestor</li>
+</ul>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h1>Let's Try it</h1><p>Draw a flowchart and its pseudocode to represent a program that allows the user to enter values for the width and length of a room&#39;s floor in feet</p>
+<p>The program outputs the area of the floor</p>
+
+                  </section>
+                  <section>
+                    <h3>One Possible Solution</h3><img src="assets/area_flow_chart.png">
+                  </section>
+                  <section>
+                    <h3></h3><h6 id="one-solution">One solution</h6>
+<pre><code>Start
+  Read height
+  Read width
+  Set area = height * width
+  Output area
+End
+</code></pre><h6 id="javascript-you-can-try-it-and-change-the-values-">JavaScript (You can try it and change the values)</h6>
+<pre><code>var height = prompt(&#39;Enter Height in Feet&#39;, 0);
+var width = primpt(&#39;Enter Width in Feet&#39;, 0);
+alert(height * width)
+</code></pre>
+                      <aside class="notes"><p>Like <strong>alert</strong> <strong>prompt</strong> is something we can execute from the console that will allow us to provide text to our variables</p>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h1>Review</h1><img src="assets/the_three_structures_review.png">
+                  </section>
+            </section>
+            <section>
+                  <section>
+                    <h3>Putting them together</h3><img src="assets/combining_structures.png" width="80%">
+                  </section>
+                  <section>
+                    <h3>Identify the parts</h3><img src="assets/loop_in_sequence_in_selection.png">
+                      <aside class="notes"><p>Identify what is the loop what is the sequence and what is the selection</p>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3>Identify the parts</h3><img src="assets/selection_in_loop_in_sequence.png" width="70%">
+                      <aside class="notes"><p>Identify what is the loop what is the sequence and what is the selection</p>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3>Lets build our own</h3><h6 id="buying-and-planting-flowers-in-the-spring">Buying and planting flowers in the spring</h6>
+<pre><code>if we are planting flowers this year then
+  buy flowers in pots
+  while frost is still possible
+    if it is over 50F today then
+      bring potted flowers outdoors for the day
+    else
+      keep potted flowers inside for the day
+    end if
+  end while
+  plant flowers in ground
+end if
+</code></pre>
+                      <aside class="notes"><p>Identify what is the loop what is the sequence and what is the selection</p>
+
+                      </aside>
+                  </section>
+                  <section>
+                    <h3>Two Truths &amp; a Lie</h3>
+                      <ol>
+                        <li>Each structure in structured programming is a sequence, selection, or loop.</li>
+                        <li>All logic problems can be solved using only three structures-sequence, selection, and loop.</li>
+                        <li>The three structures cannot be combined into a single program.</li>
+                      </ol>
+                  </section>
+                  <section>
+                    <h1>Try it on your own</h1><p>Draw a flowchart and its pseudocode to represent a program that will take 5 coffee orders</p>
+<p>You will ask each person if they want decaf</p>
+<p>You will ask each person if they want milk</p>
+<p>We will review it on Monday</p>
+
+                  </section>
+            </section>
+            <section>
+                  <section>
+                    <h3>What is Structured Code</h3>
+                  </section>
+                  <section>
+                    <h3>The Rules</h3><ul>
+<li>A structured program includes only combinations of the three basic structures.</li>
+<li>Each of the structures has a single entry point and a single exit point.</li>
+<li>Any structures can be stacked or connected to one another at their entry and exit points.</li>
+<li>Any structure can be nested within another structure.</li>
+</ul>
+
+                  </section>
+                  <section>
+                    <h3>The Reason for Structure</h3><ul>
+<li><em>Clarity</em> - As programs get bigger, they get more confusing if they are not structured.</li>
+<li><em>Maintenance</em> - You and other programmers will find it easier to modify and maintain structured programs as they change in the future</li>
+<li><em>Modularity</em> - Structured programs can easily be broken down into modules that can be assigned to other programmers. Modules can be reused.</li>
+</ul>
+
+                  </section>
+                  <section>
+                    <h3>Example of unstructured code</h3><img src="assets/an_unstructured_program.png" width="60%">
+                  </section>
+                  <section>
+                    <h3>Two Truths &amp; a Lie</h3>
+                      <ol>
+                        <li>Some processes cannot be expressed in a structured format.</li>
+                        <li>An unstructured flowchart can achieve correct outcome.</li>
+                        <li>Any unstructured can be 'detangled' to become structured.</li>
+                      </ol>
+                  </section>
+                  <section>
+                    <h1>Let's Try It</h1><p>You are concerned that your car has a flat tire. Standing outside the car how do we identify and/or replace a leaky tire?</p>
+
+                  </section>
+            </section>
+      </div>
+    </div>
+    <script type="text/javascript" src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script type="text/javascript" src="bower_components/reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+       Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'beige',
+        slideNumber: true,
+        transition: 'concave',
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: revealLocation + 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: revealLocation + 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: revealLocation + 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: revealLocation + 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: revealLocation + 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+       });
+    </script>
+  </body>
+</html>
